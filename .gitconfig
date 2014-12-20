@@ -30,3 +30,5 @@
 [core]
     autocrlf = input
     editor = emacs
+[grep]
+    linenumber = true
