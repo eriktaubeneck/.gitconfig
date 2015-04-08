@@ -5,8 +5,9 @@
 	co = checkout
 	lg = !git --no-pager log --color --decorate --all --graph --pretty=oneline --abbrev-commit -30
         uncommit = reset --soft HEAD^
-        lgg = !git fetch --all && git lg
+        lgg = !git fetch --all --prune && git lg
         ff = merge --ff-only
+        pr = !hub pull-request | xargs open
 [apply]
 	whitespace = nowarn
 
@@ -32,3 +33,5 @@
     editor = emacs
 [grep]
     linenumber = true
+[push]
+    default = simple
